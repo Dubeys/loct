@@ -1,0 +1,82 @@
+.row {
+    display: flex;
+    align-items: stretch;
+    padding: 0 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+}
+
+.row:hover {
+    background: #373841;
+}
+
+.row:last-child {
+    border: 0;
+}
+
+.row .row__label {
+    width: 300px;
+    min-width: 300px;
+    border-right: 1px solid rgba(255, 255, 255, .1);
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.row .row__label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 100%;
+
+}
+
+.row .row__label label, .row .row__label input {
+    display: block;
+    box-sizing: border-box;
+    margin-right: .5rem;
+    color: rgba(255, 255, 255, .3);
+    font-size: .75rem;
+    font-weight: 700;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.row .row__label input {
+    border-bottom: 1px solid white;
+    padding-bottom: .5rem;
+    margin-right: 4rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.row .row__label .row__label__actions {
+    display: flex;
+    position: absolute;
+    right: 0;
+    padding-right: 1rem;
+    opacity: 0;
+    visibility: hidden;
+    cursor: pointer;
+}
+
+.row:hover .row__label .row__label__actions {
+    opacity: .3;
+    visibility: visible;
+}
+
+.row .row__inputs {
+    flex: 1;
+    display: flex;
+    width: 100%;
+}
+
+.row .row__inputs .row__inputs__input {
+    flex: 1;
+    min-width: 200px;
+    border-right: 1px solid rgba(255, 255, 255, .1);
+}
+
+.row .row__inputs .row__inputs__input:last-child {
+    border: none;
+} 

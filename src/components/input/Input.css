@@ -1,0 +1,104 @@
+.input {
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.input.input--empty {
+    position: relative;
+}
+
+.input.input--empty:before {
+    content: '';
+    display: block;
+    position: absolute;
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 7px;
+
+    border: 1px solid red;
+    background: white;
+    box-shadow: 0 0 10px 1px rgb(255,0,0);
+    right: 0;
+    top: 0;
+}
+
+.input.input--visualise {
+    background: rgba(255,255,255,.1);
+}
+
+.input.input--updated  textarea, .input.input--updated.input--duplicate  textarea {
+    color: rgb(136, 255, 125);
+}
+
+.input.input--duplicate  textarea{
+    color: rgb(255, 242, 124);
+}
+
+.input textarea {
+    resize: none;
+    padding: 0;
+    border: 1px solid transparent;
+    outline: none;
+    color: white;
+    background: none;
+    font-weight: 500;
+    font-size: .825rem;
+    width: 100%;
+}
+
+.input p {
+    padding: 0;
+    border: 1px solid transparent;
+    outline: none;
+    color: white;
+    margin: 0;
+    background: none;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    width: 100%;
+    font-family: serif;
+}
+
+.input .input__icons {
+    
+    position: absolute;
+    right: 1px;
+    bottom: 0;
+    transform: translate(50%,0);
+
+    /* height: 100%; */
+    display: flex;
+    align-items: center;
+
+    z-index: 2;
+
+    visibility: hidden;
+    opacity: 0;
+
+    background: rgba(43, 44, 49);
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.input .input__icons.input__icons--visible {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: .1s;
+}
+
+.input .input__icons img {
+    padding: 1rem;
+    width: 20px;
+}
+
+.input .input__icons img.hidden {
+    opacity: .2;
+}

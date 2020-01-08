@@ -1,0 +1,33 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: rgba(255, 255, 255, .3);
+    background: #2b2c31;
+    z-index: 100;
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+
+    opacity: .99;
+
+    display: flex;
+}
+
+.header p {
+    display: block;
+    box-sizing: border-box;
+    font-weight: 700;
+}
+
+.header__actions {
+    display: flex;
+    width: 300px;
+    min-width: 300px;
+} 
+
+.header__col {
+    flex: 1;
+    min-width: calc(200px + 1rem);
+    padding: 0 1rem;
+}
